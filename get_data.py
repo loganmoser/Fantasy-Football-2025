@@ -2,6 +2,7 @@ import requests
 import pandas as pd
 import os
 from pathlib import Path
+import time
 
 # If seasons or player subdirectory does not exist create it
 def check_dir(subdir):
@@ -45,7 +46,30 @@ def get_season(season):
 
 def get_player(player):
     try:
-        check_dir(f'players')
+        # To track requests and comply with rate limits
+        counter = 0
+        # Check for players directory if not present -- create it
+        check_dir(f'players/{player}')
+        # Each player has a unique url for their stats page made up of /first letter of last name /first four of last name first two of first name00
+        first_name = player.split(' ')[0]
+        last_name = player.split(' ')[1]
+        player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].toUpper()}/{last_name[:4]}{first_name[:2]}00"
+        player_url = f"{player_base_url}.htm"
+
+        # Create career data frame for analysis
+        career_df = pd.read_html(io=player_url)
+        # we need to stay under 10 requests a minute
+        counter += 1
+        if counter == 10:
+            time.sleep(60)
+
+        # Get individual seasons for time-based trend analysis
+        seasons = career_df['Season']
+
+        for season in seasons:
+            season_url = f"{player_base_url}/gamelog/{season}"
+            season_df = pd.read_html(io=season_url, header=1)
+
     except Exception as e:
         print(f"Error processing {player}: {str(e)}")
         return False
