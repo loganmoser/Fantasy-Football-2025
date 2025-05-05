@@ -52,6 +52,7 @@ def get_player(player):
 #If the 2025 fantasy rankings don't already exist - get them
 for i in range(2024, 2019, -1):
   if os.path.isfile(os.path.join(os.getcwd(), f"data/seasons/{i}_fantasy.csv")):
+      print(f'Data for the {i} season already exists. Continuing to the next season...')
       continue
   else:
       get_season(i)
@@ -62,3 +63,4 @@ ff24_df = pd.read_csv('data/seasons/2024_fantasy.csv')
 # We only want top 200 performs and skip unnamed 0 column
 top_performers = ff24_df.iloc[:200, 1:]
 
+top_players = top_performers['Player']
