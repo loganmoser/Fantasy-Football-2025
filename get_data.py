@@ -5,10 +5,11 @@ from pathlib import Path
 
 # If seasons or player subdirectory does not exist create it
 def check_dir(subdir):
-    if not os.path.isdir(os.path.join(os.getcwd(), f"data/{subdir}/")):
+    dir_path = Path(f"data/{subdir}/")
+    if not dir_path.is_dir():
         print(f"Directory 'data/{subdir}' does not exist")
         print(f"Creating 'data/{subdir}'...")
-        os.mkdir(os.path.abspath(os.path.join(os.getcwd(), f"data/{subdir}/")))
+        Path.mkdir(dir_path)
 
 
 def get_season(season):
@@ -44,7 +45,7 @@ def get_season(season):
 
 def get_player(player):
     try:
-        check_dir('players')
+        check_dir(f'players')
     except Exception as e:
         print(f"Error processing {player}: {str(e)}")
         return False
