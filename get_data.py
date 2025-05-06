@@ -56,37 +56,55 @@ def get_season(season):
         print(f"Error processing {season} season: {str(e)}")
         return False
 
-def get_player(player):
+def get_player(player, header_row):
     try:
         global counter
         # To track requests and comply with rate limits
         # Check for players directory if not present -- create it
         check_dir(f'players/{player}')
         # Each player has a unique url for their stats page made up of /first letter of last name /first four of last name first two of first name00
-        first_name = player.split(' ')[0]
+        first_name = player.split(' ')[0].strip('.')
         last_name = player.split(' ')[1]
+        # Some players have names like Amon-Ra St. Brown and need different formatting
+        if "." in last_name:
+            last_name = last_name.split('.')[0]
+            last_name = last_name+'xx'
         combo_num = "00" # This represents the players that have the combination of last_name[0]/last_name[:4]first_name[:2] if there are more than 1 we'll need to make sure most recent season is 2024
         player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].upper()}/{last_name[:4]}{first_name[:2]}{combo_num}"
         player_url = f"{player_base_url}.htm"
-        # Create career data frame for analysis
-        career_list = pd.read_html(io=player_url, header=1)
+        # Create career data frame for analysis Qbs do not have distinctions between rushing and receiving stats so their tables are different
+        career_list = pd.read_html(io=player_url, header=header_row)
         career_df = career_list[0]
-        career_df.set_index('Season', drop=False)
-
-        # Get individual seasons for time-based trend analysis
-        seasons = [int(season) for season in career_df['Season'] if str(season).strip().isdigit()]
-        while (seasons[-1] != 2024):
+        # If season not in columns we do not have the correct header_row
+        while 'Season' not in career_df.columns:
             combo_num = str(int(combo_num) + 1).zfill(2)
             player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].upper()}/{last_name[:4]}{first_name[:2]}{combo_num}"
             player_url = f"{player_base_url}.htm"
-            # Create career data frame for analysis
-            career_list = pd.read_html(io=player_url, header=1)
+
+            career_list = pd.read_html(io=player_url, header=header_row)
+
+            add_request()
+
             career_df = career_list[0]
-            career_df.set_index('Season', drop=False)
+
+        # Get individual seasons for time-based trend analysis
+        seasons = [int(season) for season in career_df['Season'] if str(season).strip().isdigit()]
+
+        while seasons[-1] != 2024:
+            combo_num = str(int(combo_num) + 1).zfill(2)
+            player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].upper()}/{last_name[:4]}{first_name[:2]}{combo_num}"
+            player_url = f"{player_base_url}.htm"
+
+            career_list = pd.read_html(io=player_url, header=header_row)
+
+            add_request()
+
+            career_df = career_list[0]
 
             # Get individual seasons for time-based trend analysis
             seasons = [int(season) for season in career_df['Season'] if str(season).strip().isdigit()]
 
+        career_df.set_index('Season', drop=False)
         career_df.to_csv(f'data/players/{player}/{player}_career.csv')
 
         # We need to stay under 10 requests a minute
@@ -98,6 +116,7 @@ def get_player(player):
         for season in seasons:
             season_csv = f'data/players/{player}/{player}_{season}.csv'
             if Path(season_csv).exists():
+                print(f"{player}_{season}.csv already exists. Continuing...")
                 continue
             print(f"Fetching data for {player}'s season in {season}")
             season_url = f"{player_base_url}/gamelog/{season}"
@@ -126,10 +145,10 @@ ff24_df = pd.read_csv('data/seasons/2024_fantasy.csv')
 top_performers = ff24_df.iloc[:200, 1:]
 
 players = top_performers['Player']
+positions = top_performers['FantPos']
 
-for player in players:
-    if Path(f"data/players/{player}").exists():
-        print(f'Data for {player} already exists. Continuing to the next player...')
-        continue
+for player, position in zip(players,positions):
+    if position == 'QB':
+        get_player(player, 0)
     else:
-        get_player(player)
+        get_player(player, 1)
