@@ -1,0 +1,19 @@
+,Rk,Gcar,Gtm,Week,Date,Team,Unnamed: 6,Opp,Result,GS,Tgt,Rec,Yds,Y/R,TD,Ctch%,Y/Tgt,Att,Yds.1,TD.1,Y/A,Fmb,FL,FF,FR,Yds.2,FRTD,OffSnp,Off%,DefSnp,Def%,STSnp,ST%
+0,1.0,35.0,1.0,1.0,2024-09-08,PIT,@,ATL,"W, 18-10",*,7,6,85,14.2,0,85.7,12.1,1,-10,0,-10.0,0,0,0,0,0,0,46,67.6,0,0.0,0,0.0
+1,2.0,36.0,2.0,2.0,2024-09-15,PIT,@,DEN,"W, 13-6",*,4,2,29,14.5,0,50.0,7.3,0,0,0,,0,0,0,0,0,0,51,77.3,0,0.0,0,0.0
+2,3.0,37.0,3.0,3.0,2024-09-22,PIT,,LAC,"W, 20-10",*,7,5,57,11.4,0,71.4,8.1,0,0,0,,0,0,0,0,0,0,50,73.5,0,0.0,0,0.0
+3,4.0,38.0,4.0,4.0,2024-09-29,PIT,@,IND,"L, 24-27",*,11,7,113,16.1,0,63.6,10.3,0,0,0,,1,1,0,0,0,0,60,85.7,0,0.0,0,0.0
+4,5.0,39.0,5.0,5.0,2024-10-06,PIT,,DAL,"L, 17-20",*,7,3,26,8.7,0,42.9,3.7,0,0,0,,0,0,0,0,0,0,34,58.6,0,0.0,0,0.0
+5,6.0,40.0,6.0,6.0,2024-10-13,PIT,@,LVR,"W, 32-13",*,8,3,53,17.7,0,37.5,6.6,0,0,0,,0,0,0,0,0,0,45,67.2,0,0.0,1,4.0
+6,7.0,41.0,7.0,7.0,2024-10-20,PIT,,NYJ,"W, 37-15",,9,5,111,22.2,1,55.6,12.3,0,0,0,,0,0,0,0,0,0,54,79.4,0,0.0,0,0.0
+7,8.0,42.0,8.0,8.0,2024-10-28,PIT,,NYG,"W, 26-18",*,5,4,74,18.5,0,80.0,14.8,0,0,0,,0,0,0,0,0,0,53,80.3,0,0.0,0,0.0
+8,9.0,43.0,9.0,10.0,2024-11-10,PIT,@,WAS,"W, 28-27",*,7,5,91,18.2,1,71.4,13.0,1,4,0,4.0,0,0,0,0,0,0,63,80.8,0,0.0,0,0.0
+9,10.0,44.0,10.0,11.0,2024-11-17,PIT,,BAL,"W, 18-16",*,12,8,89,11.1,0,66.7,7.4,0,0,0,,0,0,0,0,0,0,69,88.5,0,0.0,0,0.0
+10,11.0,45.0,11.0,12.0,2024-11-21,PIT,@,CLE,"L, 19-24",,7,4,48,12.0,0,57.1,6.9,0,0,0,,0,0,0,0,0,0,62,89.9,0,0.0,0,0.0
+11,12.0,46.0,12.0,13.0,2024-12-01,PIT,@,CIN,"W, 44-38",*,6,3,74,24.7,1,50.0,12.3,0,0,0,,0,0,0,0,0,0,63,91.3,0,0.0,1,3.0
+12,12.0,,13.0,14.0,2024-12-08,PIT,,CLE,"W, 27-14",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+13,12.0,,14.0,15.0,2024-12-15,PIT,@,PHI,"L, 13-27",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+14,12.0,,15.0,16.0,2024-12-21,PIT,@,BAL,"L, 17-34",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+15,13.0,47.0,16.0,17.0,2024-12-25,PIT,,KAN,"L, 10-29",*,7,3,50,16.7,0,42.9,7.1,0,0,0,,0,0,0,0,0,0,68,90.7,0,0.0,0,0.0
+16,14.0,48.0,17.0,18.0,2025-01-04,PIT,,CIN,"L, 17-19",*,6,1,0,0.0,0,16.7,0.0,0,0,0,,0,0,0,0,0,0,56,91.8,0,0.0,0,0.0
+17,,,,,,,,,9-5,,103,59,900,15.3,3,57.3,8.7,2,-6,0,-3.0,1,1,0,0,0,0,774,80.5,0,0.0,2,0.5
