@@ -6,6 +6,13 @@ import time
 
 counter = 0
 
+def add_request():
+    global counter
+    counter += 1
+    if counter % 10 == 0:
+        print("10 requests reached. Stopping for 60 seconds...")
+        time.sleep(60)
+
 # If seasons or player subdirectory does not exist create it
 def check_dir(subdir):
     dir_path = Path(f"data/{subdir}/")
@@ -26,10 +33,7 @@ def get_season(season):
         print(f"Fetching data for {season} season...")
         curr_season = pd.read_html(io=url, header=1)
         # After making a request we need to make sure we are within site rules
-        counter += 1
-        if counter % 10 == 0:
-            print("10 requests reached. Stopping for 60 seconds...")
-            time.sleep(60)
+        add_request()
 
         season_df = curr_season[0]
         season_df.set_index('Rk', drop=False)
@@ -61,33 +65,48 @@ def get_player(player):
         # Each player has a unique url for their stats page made up of /first letter of last name /first four of last name first two of first name00
         first_name = player.split(' ')[0]
         last_name = player.split(' ')[1]
-        player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].upper()}/{last_name[:4]}{first_name[:2]}00"
+        combo_num = "00" # This represents the players that have the combination of last_name[0]/last_name[:4]first_name[:2] if there are more than 1 we'll need to make sure most recent season is 2024
+        player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].upper()}/{last_name[:4]}{first_name[:2]}{combo_num}"
         player_url = f"{player_base_url}.htm"
         # Create career data frame for analysis
         career_list = pd.read_html(io=player_url, header=1)
         career_df = career_list[0]
         career_df.set_index('Season', drop=False)
-        career_df.to_csv(f'data/players/{player}/{player}_career.csv')
-
-        # We need to stay under 10 requests a minute
-        counter += 1
-        if counter % 10 == 0:
-            print("10 requests reached. Stopping for 60 seconds...")
-            time.sleep(60)
 
         # Get individual seasons for time-based trend analysis
         seasons = [int(season) for season in career_df['Season'] if str(season).strip().isdigit()]
+        while (seasons[-1] != 2024):
+            combo_num = str(int(combo_num) + 1).zfill(2)
+            player_base_url = f"https://www.pro-football-reference.com/players/{last_name[0].upper()}/{last_name[:4]}{first_name[:2]}{combo_num}"
+            player_url = f"{player_base_url}.htm"
+            # Create career data frame for analysis
+            career_list = pd.read_html(io=player_url, header=1)
+            career_df = career_list[0]
+            career_df.set_index('Season', drop=False)
+
+            # Get individual seasons for time-based trend analysis
+            seasons = [int(season) for season in career_df['Season'] if str(season).strip().isdigit()]
+
+        career_df.to_csv(f'data/players/{player}/{player}_career.csv')
+
+        # We need to stay under 10 requests a minute
+        add_request()
+
+        # Get individual seasons for time-based trend analysis
+        seasons = [int(season) for season in career_df['Season'] if str(season).strip().isdigit()]
+
         for season in seasons:
-            print(f"Fetching data for {player}'s season in {year}")
+            season_csv = f'data/players/{player}/{player}_{season}.csv'
+            if Path(season_csv).exists():
+                continue
+            print(f"Fetching data for {player}'s season in {season}")
             season_url = f"{player_base_url}/gamelog/{season}"
             season_df = pd.read_html(io=season_url, header=1)[0]
             
-            counter += 1
-            if counter % 10 == 0:
-                print("10 requests reached. Stopping for 60 seconds...")
-                time.sleep(60)
-            
+            add_request()
+
             season_df.to_csv(f'data/players/{player}/{player}_{season}.csv')
+            
     except Exception as e:
         print(f"Error processing {player}: {str(e)}")
         return False
