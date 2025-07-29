@@ -78,7 +78,12 @@ def get_career(link, browser):
         #Getting player name for file name
         player_name = player_info.find_element(By.CSS_SELECTOR, 'span').text
         #TODO Get years played
-
+        career = pd.read_html(io=link, header=1)
+        career_df = career[0]
+        print(career_df)
+        add_request()
+        seasons = career_df['Season']
+        print(seasons)
     except Exception as e:
         print(f"Error getting career data from {link}...: {str(e)}")
 
@@ -104,6 +109,8 @@ print(top_players)
 # Turning top players to a list and saving the file
 link_df = pd.DataFrame(list(top_players), columns=['Player_Link'])
 link_df.to_csv('data/player_links.csv')
+
+link_df = pd.read_csv('data/player_links.csv')
 
 driver = webdriver.Firefox(options=options)
 for link in link_df['Player_Link']:
