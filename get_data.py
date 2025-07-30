@@ -71,44 +71,65 @@ def get_top_performers(season, browser):
         print(f"Error getting top players from the {season} season: {str(e)}")
         return False
 
+
+
 def get_career(link, browser):
     try:
         browser.get(link)
-        player_info = browser.find_element(By.ID, 'info')
-        #Getting player name for file name
-        player_name = player_info.find_element(By.CSS_SELECTOR, 'span').text
-        #TODO Get years played
-        career = pd.read_html(io=link, header=1)
-        career_df = career[0]
-        print(career_df)
         add_request()
-        seasons = career_df['Season']
-        print(seasons)
+        #TODO Get Position
+        #If quarterback - use headers = 0 else headers = 1
+        info_box = browser.find_element(By.ID, 'meta')
+        media_text = info_box.find_elements(By.CSS_SELECTOR, 'p')
+        if 'QB' in media_text:
+            headers = 0
+        else:
+            headers = 1
+        #TODO Get years played
+        career = pd.read_html(io=link, header=headers)
+        add_request()
+        career_df = career[0]
+        seasons = pd.to_numeric(career_df['Season'], errors='coerce').dropna().astype(int).tolist()
+        #TODO Get Game-log links
+        a_tags = browser.find_elements(By.TAG_NAME, 'a')
+        text = [a.text for a in a_tags]
+        print(text)
+        season_links = [season.get_attribute('href') for season in browser.find_elements(By.TAG_NAME, 'a') if pd.to_numeric(()season.text in seasons]
+        print(season_links)
+        #Dropping unneeded rows from df
+        filtered_df = career_df[career_df['Season'].astype(str).isin(str(s) for s in seasons)] # convert the df columns and int from list to get str seasons
+        #Getting player name for file name
+        player_name = info_box.find_element(By.CSS_SELECTOR, 'span').text
+        #Make player folder
+        # player_folder = f'players/{player_name}'
+        # check_dir(player_folder)
+
     except Exception as e:
         print(f"Error getting career data from {link}...: {str(e)}")
 
 
-#If the 2025 fantasy rankings don't already exist - get them
+# If the 2025 fantasy rankings don't already exist - get them
 players = []
 options = webdriver.FirefoxOptions()
 options.add_argument("-headless")
-driver = webdriver.Firefox(options=options)
-for i in range(2024, 2019, -1):
-    players += get_top_performers(i, driver)
-    file_path = Path(f'data/seasons/{i}_fantasy.csv')
-    if Path.is_file(file_path):
-        print(f'There is already data for the {i} season...')
-        continue
-    else:
-        get_fantasy_season(i)
-driver.close()
-top_players = set(players)
 
-print(top_players)
-
-# Turning top players to a list and saving the file
-link_df = pd.DataFrame(list(top_players), columns=['Player_Link'])
-link_df.to_csv('data/player_links.csv')
+#Allow user to decide whether to get new data or just search for player data
+user_input = input('Do you want to get new player info? (y/N): ')
+if user_input.lower() == 'y':
+    driver = webdriver.Firefox(options=options)
+    for i in range(2024, 2019, -1):
+        players += get_top_performers(i, driver)
+        file_path = Path(f'data/seasons/{i}_fantasy.csv')
+        if Path.is_file(file_path):
+            print(f'There is already data for the {i} season...')
+            continue
+        else:
+            get_fantasy_season(i)
+    driver.close()
+    top_players = set(players)
+    # Turning top players to a list and saving the file
+    link_df = pd.DataFrame(list(top_players), columns=['Player_Link'])
+    link_df.to_csv('data/player_links.csv')
 
 link_df = pd.read_csv('data/player_links.csv')
 
