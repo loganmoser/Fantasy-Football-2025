@@ -92,9 +92,9 @@ def get_career(link, browser):
         seasons = pd.to_numeric(career_df['Season'], errors='coerce').dropna().astype(int).tolist()
         #TODO Get Game-log links
         a_tags = browser.find_elements(By.TAG_NAME, 'a')
-        text = [a.text for a in a_tags]
-        print(text)
-        season_links = [season.get_attribute('href') for season in browser.find_elements(By.TAG_NAME, 'a') if pd.to_numeric(season.text) in seasons]
+        season_tags = [a for a in a_tags if a.text.isdigit()]
+        season_links = [season.get_attribute('href') for season in season_tags if pd.to_numeric(season.text) in seasons] #Get links that contain a year
+        season_links = set([season for season in season_links if '/gamelog' in season and '/advanced/' not in season])
         print(season_links)
         #Dropping unneeded rows from df
         filtered_df = career_df[career_df['Season'].astype(str).isin(str(s) for s in seasons)] # convert the df columns and int from list to get str seasons
