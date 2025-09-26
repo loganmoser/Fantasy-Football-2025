@@ -94,7 +94,7 @@ def get_career(link, browser):
         a_tags = browser.find_elements(By.TAG_NAME, 'a')
         text = [a.text for a in a_tags]
         print(text)
-        season_links = [season.get_attribute('href') for season in browser.find_elements(By.TAG_NAME, 'a') if pd.to_numeric(()season.text in seasons]
+        season_links = [season.get_attribute('href') for season in browser.find_elements(By.TAG_NAME, 'a') if pd.to_numeric(season.text) in seasons]
         print(season_links)
         #Dropping unneeded rows from df
         filtered_df = career_df[career_df['Season'].astype(str).isin(str(s) for s in seasons)] # convert the df columns and int from list to get str seasons
