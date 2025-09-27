@@ -1,0 +1,19 @@
+,Rk,Gcar,Gtm,Week,Date,Team,Unnamed: 6,Opp,Result,GS,Att,Yds,TD,Y/A,Tgt,Rec,Yds.1,Y/R,TD.1,Ctch%,Y/Tgt,Ret,Yds.2,KRTD,Y/Ret,Fmb,FL,FF,FR,Yds.3,FRTD,OffSnp,Off%,DefSnp,Def%,STSnp,ST%
+0,1.0,28.0,1.0,1.0,2024-09-08,HOU,@,IND,"W, 29-27",,3,16,0,5.3,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,9,11.4,0,0.0,5,20.0
+1,1.0,,2.0,2.0,2024-09-15,HOU,,CHI,"W, 19-13",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+2,1.0,,3.0,3.0,2024-09-22,HOU,@,MIN,"L, 7-34",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+3,1.0,,4.0,4.0,2024-09-29,HOU,,JAX,"W, 24-20",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+4,1.0,,5.0,5.0,2024-10-06,HOU,,BUF,"W, 23-20",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+5,2.0,29.0,6.0,6.0,2024-10-13,HOU,@,NWE,"W, 41-21",,8,76,1,9.5,1,1,1,1.0,0,100.0,1.0,0,0,0,,0,0,0,0,0,0,18,27.3,0,0.0,0,0.0
+6,3.0,30.0,7.0,7.0,2024-10-20,HOU,@,GNB,"L, 22-24",,2,2,0,1.0,0,0,0,,0,,,1,42,0,42.0,0,0,0,0,0,0,7,10.9,0,0.0,4,13.8
+7,4.0,31.0,8.0,8.0,2024-10-27,HOU,,IND,"W, 23-20",,1,4,0,4.0,0,0,0,,0,,,2,78,0,39.0,0,0,0,0,0,0,4,5.6,0,0.0,5,15.2
+8,4.0,,9.0,9.0,2024-10-31,HOU,@,NYJ,"L, 13-21",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+9,4.0,,10.0,10.0,2024-11-10,HOU,,DET,"L, 23-26",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+10,5.0,32.0,11.0,11.0,2024-11-18,HOU,@,DAL,"W, 34-10",,1,2,0,2.0,0,0,0,,0,,,1,5,0,5.0,0,0,0,0,0,0,4,6.3,0,0.0,3,11.1
+11,6.0,33.0,12.0,12.0,2024-11-24,HOU,,TEN,"L, 27-32",,0,0,0,,0,0,0,,0,,,3,135,0,45.0,0,0,0,0,0,0,0,0.0,0,0.0,6,17.1
+12,7.0,34.0,13.0,13.0,2024-12-01,HOU,@,JAX,"W, 23-20",,0,0,0,,1,1,1,1.0,0,100.0,1.0,0,0,0,,0,0,0,0,0,0,7,11.1,0,0.0,5,18.5
+13,8.0,35.0,14.0,15.0,2024-12-15,HOU,,MIA,"W, 20-12",,0,0,0,,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,7,14.0,0,0.0,4,16.0
+14,9.0,36.0,15.0,16.0,2024-12-21,HOU,@,KAN,"L, 19-27",,1,4,0,4.0,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,4,6.8,0,0.0,6,25.0
+15,10.0,37.0,16.0,17.0,2024-12-25,HOU,,BAL,"L, 2-31",,5,13,0,2.6,0,0,0,,0,,,1,45,0,45.0,0,0,0,0,0,0,14,25.0,0,0.0,7,29.2
+16,11.0,38.0,17.0,18.0,2025-01-05,HOU,@,TEN,"W, 23-14",,19,176,1,9.3,2,0,0,,0,0.0,0.0,1,34,0,34.0,1,0,0,1,0,0,37,61.7,0,0.0,3,13.0
+17,,,,,,,,,7-4,,40,293,2,7.3,4,2,2,1.0,0,50.0,0.5,9,339,0,37.7,1,0,0,1,0,0,111,16.1,0,0.0,48,15.7

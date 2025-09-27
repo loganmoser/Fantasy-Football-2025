@@ -1,0 +1,19 @@
+,Rk,Gcar,Gtm,Week,Date,Team,Unnamed: 6,Opp,Result,GS,Tgt,Rec,Yds,Y/R,TD,Ctch%,Y/Tgt,Att,Yds.1,TD.1,Y/A,Ret,Yds.2,KRTD,Y/Ret,Ret.1,Yds.3,PRTD,Y/Ret.1,Fmb,FL,FF,FR,Yds.4,FRTD,OffSnp,Off%,DefSnp,Def%,STSnp,ST%
+0,1.0,60.0,1.0,1.0,2024-09-08,JAX,@,MIA,"L, 17-20",,0,0,0,,0,,,1,3,0,3.0,0,0,0,,1,3,0,3.0,0,0,0,0,0,0,5,9.4,0,0.0,8,32.0
+1,2.0,61.0,2.0,2.0,2024-09-15,JAX,,CLE,"L, 13-18",,0,0,0,,0,,,1,4,0,4.0,1,12,0,12.0,1,8,0,8.0,0,0,0,0,0,0,3,5.0,0,0.0,11,40.7
+2,3.0,62.0,3.0,3.0,2024-09-23,JAX,@,BUF,"L, 10-47",,1,1,-1,-1.0,0,100.0,-1.0,0,0,0,,1,27,0,27.0,0,0,0,,0,0,0,0,0,0,11,15.5,0,0.0,10,40.0
+3,4.0,63.0,4.0,4.0,2024-09-29,JAX,@,HOU,"L, 20-24",,0,0,0,,0,,,0,0,0,,3,61,0,20.3,2,2,0,1.0,0,0,0,0,0,0,6,10.3,0,0.0,11,37.9
+4,5.0,64.0,5.0,5.0,2024-10-06,JAX,,IND,"W, 37-34",,0,0,0,,0,,,1,3,0,3.0,0,0,0,,3,68,0,22.7,0,0,0,0,0,0,7,12.1,0,0.0,7,20.6
+5,5.0,,6.0,6.0,2024-10-13,JAX,@,CHI,"L, 16-35",Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play
+6,5.0,,7.0,7.0,2024-10-20,JAX,,NWE,"W, 32-16",Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play
+7,5.0,,8.0,8.0,2024-10-27,JAX,,GNB,"L, 27-30",Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play
+8,5.0,,9.0,9.0,2024-11-03,JAX,@,PHI,"L, 23-28",Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play,Did Not Play
+9,6.0,65.0,10.0,10.0,2024-11-10,JAX,,MIN,"L, 7-12",,0,0,0,,0,,,0,0,0,,0,0,0,,0,0,0,,0,0,0,0,0,0,0,0.0,0,0.0,7,36.8
+10,7.0,66.0,11.0,11.0,2024-11-17,JAX,@,DET,"L, 6-52",,2,0,0,,0,0.0,0.0,0,0,0,,2,58,0,29.0,0,0,0,,0,0,0,0,0,0,14,29.2,0,0.0,9,34.6
+11,8.0,67.0,12.0,13.0,2024-12-01,JAX,,HOU,"L, 20-23",,4,2,23,11.5,0,50.0,5.8,0,0,0,,3,68,0,22.7,1,5,0,5.0,0,0,0,0,0,0,40,57.1,0,0.0,10,37.0
+12,9.0,68.0,13.0,14.0,2024-12-08,JAX,@,TEN,"W, 10-6",*,3,3,8,2.7,0,100.0,2.7,1,-7,0,-7.0,0,0,0,,2,8,0,4.0,0,0,0,0,0,0,29,49.2,0,0.0,6,33.3
+13,10.0,69.0,14.0,15.0,2024-12-15,JAX,,NYJ,"L, 25-32",,4,3,42,14.0,0,75.0,10.5,0,0,0,,2,63,0,31.5,2,12,0,6.0,0,0,0,0,0,0,39,46.4,0,0.0,10,35.7
+14,11.0,70.0,15.0,16.0,2024-12-22,JAX,@,LVR,"L, 14-19",,1,1,3,3.0,0,100.0,3.0,0,0,0,,0,0,0,,4,37,0,9.3,1,0,0,1,0,0,21,31.3,0,0.0,11,40.7
+15,12.0,71.0,16.0,17.0,2024-12-29,JAX,,TEN,"W, 20-13",,1,1,4,4.0,0,100.0,4.0,0,0,0,,2,62,0,31.0,1,9,0,9.0,0,0,0,0,0,0,9,15.5,0,0.0,6,28.6
+16,13.0,72.0,17.0,18.0,2025-01-05,JAX,@,IND,"L, 23-26 (OT)",,0,0,0,,0,,,0,0,0,,0,0,0,,2,15,0,7.5,0,0,0,0,0,0,6,8.7,0,0.0,12,34.3
+17,,,,,,,,,3-10,,16,11,79,7.2,0,68.8,4.9,4,3,0,0.8,14,351,0,25.1,19,167,0,8.8,1,0,0,1,0,0,190,23.8,0,0.0,118,34.6

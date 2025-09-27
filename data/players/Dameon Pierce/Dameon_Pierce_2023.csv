@@ -1,0 +1,19 @@
+,Rk,Gcar,Gtm,Week,Date,Team,Unnamed: 6,Opp,Result,GS,Att,Yds,TD,Y/A,Tgt,Rec,Yds.1,Y/R,TD.1,Ctch%,Y/Tgt,Ret,Yds.2,KRTD,Y/Ret,Fmb,FL,FF,FR,Yds.3,FRTD,OffSnp,Off%,DefSnp,Def%,STSnp,ST%
+0,1.0,14.0,1.0,1.0,2023-09-10,HOU,@,BAL,"L, 9-25",*,11,38,0,3.5,3,2,9,4.5,0,66.7,3.0,0,0,0,,0,0,0,0,0,0,36,46.8,0,0.0,0,0.0
+1,2.0,15.0,2.0,2.0,2023-09-17,HOU,,IND,"L, 20-31",*,15,31,0,2.1,3,2,4,2.0,0,66.7,1.3,0,0,0,,0,0,0,0,0,0,38,45.2,0,0.0,0,0.0
+2,3.0,16.0,3.0,3.0,2023-09-24,HOU,@,JAX,"W, 37-17",*,14,31,1,2.2,3,3,28,9.3,0,100.0,9.3,0,0,0,,0,0,0,0,0,0,30,53.6,0,0.0,0,0.0
+3,4.0,17.0,4.0,4.0,2023-10-01,HOU,,PIT,"W, 30-6",*,24,81,0,3.4,2,1,27,27.0,0,50.0,13.5,0,0,0,,0,0,0,0,0,0,42,59.2,0,0.0,0,0.0
+4,5.0,18.0,5.0,5.0,2023-10-08,HOU,@,ATL,"L, 19-21",*,20,66,0,3.3,1,1,16,16.0,0,100.0,16.0,0,0,0,,0,0,0,0,0,0,34,58.6,0,0.0,0,0.0
+5,6.0,19.0,6.0,6.0,2023-10-15,HOU,,NOR,"W, 20-13",*,13,34,0,2.6,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,21,33.3,0,0.0,0,0.0
+6,7.0,20.0,7.0,8.0,2023-10-29,HOU,@,CAR,"L, 13-15",*,12,46,0,3.8,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,25,43.1,0,0.0,0,0.0
+7,7.0,,8.0,9.0,2023-11-05,HOU,,TAM,"W, 39-37",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+8,7.0,,9.0,10.0,2023-11-12,HOU,@,CIN,"W, 30-27",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+9,7.0,,10.0,11.0,2023-11-19,HOU,,ARI,"W, 21-16",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+10,8.0,21.0,11.0,12.0,2023-11-26,HOU,,JAX,"L, 21-24",,5,14,0,2.8,1,1,4,4.0,0,100.0,4.0,0,0,0,,0,0,0,0,0,0,11,18.3,0,0.0,0,0.0
+11,9.0,22.0,12.0,13.0,2023-12-03,HOU,,DEN,"W, 22-17",,15,41,1,2.7,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,26,38.2,0,0.0,0,0.0
+12,10.0,23.0,13.0,14.0,2023-12-10,HOU,@,NYJ,"L, 6-30",,4,9,0,2.3,1,1,-2,-2.0,0,100.0,-2.0,0,0,0,,0,0,0,0,0,0,8,14.3,0,0.0,0,0.0
+13,11.0,24.0,14.0,15.0,2023-12-17,HOU,@,TEN,"W, 19-16 (OT)",,1,3,0,3.0,0,0,0,,0,,,0,0,0,,0,0,0,0,0,0,4,5.2,0,0.0,0,0.0
+14,12.0,25.0,15.0,16.0,2023-12-24,HOU,,CLE,"L, 22-36",,3,6,0,2.0,2,1,10,10.0,0,50.0,5.0,5,174,1,34.8,0,0,0,0,0,0,11,14.7,0,0.0,6,25.0
+15,13.0,26.0,16.0,17.0,2023-12-31,HOU,,TEN,"W, 26-3",,8,16,0,2.0,1,1,5,5.0,0,100.0,5.0,1,21,0,21.0,0,0,0,0,0,0,12,19.7,0,0.0,1,4.2
+16,14.0,27.0,17.0,18.0,2024-01-06,HOU,@,IND,"W, 23-19",,0,0,0,,0,0,0,,0,,,1,30,0,30.0,0,0,0,0,0,0,0,0.0,0,0.0,5,16.7
+17,,,,,,,,,7-7,,145,416,2,2.9,17,13,101,7.8,0,76.5,5.9,7,225,1,32.1,0,0,0,0,0,0,298,32.4,0,0.0,12,3.1

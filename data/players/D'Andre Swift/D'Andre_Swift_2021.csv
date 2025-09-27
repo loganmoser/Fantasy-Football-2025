@@ -1,0 +1,19 @@
+,Rk,Gcar,Gtm,Week,Date,Team,Unnamed: 6,Opp,Result,GS,Att,Yds,TD,Y/A,Tgt,Rec,Yds.1,Y/R,TD.1,Ctch%,Y/Tgt,Cmp,Att.1,Cmp%,Yds.2,TD.2,Int,Y/A.1,AY/A,Rate,Sk,Yds.3,Fmb,FL,FF,FR,Yds.4,FRTD,OffSnp,Off%,DefSnp,Def%,STSnp,ST%
+0,1.0,14.0,1.0,1.0,2021-09-12,DET,,SFO,"L, 33-41",,11,39,0,3.5,11,8,65,8.1,1,72.7,5.9,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,63,68.5,0,0.0,0,0.0
+1,2.0,15.0,2.0,2.0,2021-09-20,DET,@,GNB,"L, 17-35",,8,37,0,4.6,5,4,41,10.3,0,80.0,8.2,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,36,63.2,0,0.0,0,0.0
+2,3.0,16.0,3.0,3.0,2021-09-26,DET,,BAL,"L, 17-19",,14,47,1,3.4,7,7,60,8.6,0,100.0,8.6,0,1,0.0,0,0,0,0.0,0.00,39.6,0,0,0,0,0,0,0,0,35,55.6,0,0.0,0,0.0
+3,4.0,17.0,4.0,4.0,2021-10-03,DET,@,CHI,"L, 14-24",,8,16,0,2.0,6,4,33,8.3,0,66.7,5.5,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,52,73.2,0,0.0,0,0.0
+4,5.0,18.0,5.0,5.0,2021-10-10,DET,@,MIN,"L, 17-19",,11,51,1,4.6,6,6,53,8.8,0,100.0,8.8,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,50,73.5,0,0.0,0,0.0
+5,6.0,19.0,6.0,6.0,2021-10-17,DET,,CIN,"L, 11-34",,13,24,1,1.8,7,5,43,8.6,0,71.4,6.1,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,49,77.8,0,0.0,0,0.0
+6,7.0,20.0,7.0,7.0,2021-10-24,DET,@,LAR,"L, 19-28",,13,48,0,3.7,10,8,96,12.0,1,80.0,9.6,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,52,75.4,0,0.0,0,0.0
+7,8.0,21.0,8.0,8.0,2021-10-31,DET,,PHI,"L, 6-44",*,12,27,0,2.3,5,5,24,4.8,0,100.0,4.8,0,0,,0,0,0,,,,0,0,1,1,0,0,0,0,44,71.0,0,0.0,0,0.0
+8,9.0,22.0,9.0,10.0,2021-11-14,DET,@,PIT,"T, 16-16 (OT)",*,33,130,0,3.9,6,3,5,1.7,0,50.0,0.8,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,66,93.0,0,0.0,0,0.0
+9,10.0,23.0,10.0,11.0,2021-11-21,DET,@,CLE,"L, 10-13",,14,136,1,9.7,4,3,0,0.0,0,75.0,0.0,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,35,72.9,0,0.0,0,0.0
+10,11.0,24.0,11.0,12.0,2021-11-25,DET,,CHI,"L, 14-16",*,3,0,0,0.0,3,3,9,3.0,0,100.0,3.0,0,0,,0,0,0,,,,0,0,1,0,0,0,0,0,10,20.4,0,0.0,0,0.0
+11,11.0,,12.0,13.0,2021-12-05,DET,,MIN,"W, 29-27",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+12,11.0,,13.0,14.0,2021-12-12,DET,@,DEN,"L, 10-38",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+13,11.0,,14.0,15.0,2021-12-19,DET,,ARI,"W, 30-12",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+14,11.0,,15.0,16.0,2021-12-26,DET,@,ATL,"L, 16-20",Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive,Inactive
+15,12.0,25.0,16.0,17.0,2022-01-02,DET,@,SEA,"L, 29-51",,4,32,0,8.0,3,2,7,3.5,0,66.7,2.3,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,36,57.1,0,0.0,0,0.0
+16,13.0,26.0,17.0,18.0,2022-01-09,DET,,GNB,"W, 37-30",*,7,30,1,4.3,5,4,16,4.0,0,80.0,3.2,0,0,,0,0,0,,,,0,0,0,0,0,0,0,0,32,54.2,0,0.0,0,0.0
+17,,,,,,,,,1-11-1,,151,617,5,4.1,78,62,452,7.3,2,79.5,5.8,0,1,0.0,0,0,0,0.0,0.00,39.6,0,0,2,1,0,0,0,0,560,67.1,0,0.0,0,0.0

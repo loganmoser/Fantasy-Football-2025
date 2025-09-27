@@ -71,6 +71,27 @@ def get_top_performers(season, browser):
         print(f"Error getting top players from the {season} season: {str(e)}")
         return False
 
+# Get the invidividual season for analysis
+def get_individual_season(link, browser, player):
+    try:
+        browser.get(link)
+        add_request()
+        #TODO Headers
+        info_box = browser.find_element(By.ID, 'meta')
+        media_text = info_box.find_elements(By.CSS_SELECTOR, 'p')
+        year = link.split('/')[-2]
+        if 'QB' in media_text:
+            headers=0
+        else:
+            headers = 1
+        season = pd.read_html(io=link, header=headers)[0]
+        add_request()
+        print(f'Saving {player} data from {year}...')
+        season.to_csv(f'data/players/{player}/{player.replace(' ', '_')}_{year}.csv')
+
+    except Exception as e:
+        print(f'There was an error getting data for the {link} season. Error:\n{str(e)}')
+
 
 
 def get_career(link, browser):
@@ -88,21 +109,28 @@ def get_career(link, browser):
         #TODO Get years played
         career = pd.read_html(io=link, header=headers)
         add_request()
-        career_df = career[0]
+        career_df = career[1]
         seasons = pd.to_numeric(career_df['Season'], errors='coerce').dropna().astype(int).tolist()
         #TODO Get Game-log links
         a_tags = browser.find_elements(By.TAG_NAME, 'a')
         season_tags = [a for a in a_tags if a.text.isdigit()]
         season_links = [season.get_attribute('href') for season in season_tags if pd.to_numeric(season.text) in seasons] #Get links that contain a year
-        season_links = set([season for season in season_links if '/gamelog' in season and '/advanced/' not in season])
-        print(season_links)
+        season_links = list(set([season for season in season_links if '/gamelog' in season and '/advanced/' not in season]))
+        season_links.sort()
         #Dropping unneeded rows from df
         filtered_df = career_df[career_df['Season'].astype(str).isin(str(s) for s in seasons)] # convert the df columns and int from list to get str seasons
         #Getting player name for file name
         player_name = info_box.find_element(By.CSS_SELECTOR, 'span').text
+
+
         #Make player folder
-        # player_folder = f'players/{player_name}'
-        # check_dir(player_folder)
+        player_folder = f'/players/{player_name}'
+        check_dir(player_folder)
+
+        # Save player career and individual seasons
+        career_df.to_csv(f'data/players/{player_name}/{player_name}_career.csv')
+        for link in season_links:
+            get_individual_season(link, browser,player_name)
 
     except Exception as e:
         print(f"Error getting career data from {link}...: {str(e)}")
@@ -136,6 +164,5 @@ link_df = pd.read_csv('data/player_links.csv')
 driver = webdriver.Firefox(options=options)
 for link in link_df['Player_Link']:
     get_career(link, driver)
-    break
 driver.close()
 
