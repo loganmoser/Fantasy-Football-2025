@@ -87,7 +87,8 @@ def get_individual_season(link, browser, player):
         season = pd.read_html(io=link, header=headers)[0]
         add_request()
         print(f'Saving {player} data from {year}...')
-        season.to_csv(f'data/players/{player}/{player.replace(' ', '_')}_{year}.csv')
+        file_path = os.path.abspath(f'data/players/{player}/{player.replace(' ', '_')}_{year}.csv')
+        season.to_csv(file_path)
 
     except Exception as e:
         print(f'There was an error getting data for the {link} season. Error:\n{str(e)}')
