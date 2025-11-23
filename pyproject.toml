@@ -1,0 +1,6 @@
+[project]
+name = "fantasy-football-2025"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.12"
+dependencies = ['selenium', 'pandas', 'requests', 'bs4', 'lxml' ]
