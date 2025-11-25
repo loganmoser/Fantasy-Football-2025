@@ -16,18 +16,17 @@ def get_year(season: pd.DataFrame) -> int:
 def rename_columns(season: pd.DataFrame, position: str) -> None:
     """Renaming passing and rushing columns so they are more easily distinguished"""
     if position == 'WR':
-        season.rename(columns={'Yds': 'Recieving Yards', 'TD': 'Receiving TD', 'Yds.1': 'Rushing Yards', 'TD.1': 'Rushing TD'}, inplace=True)
+        season.rename(columns={'Yds': 'Recieving Yards', 'TD': 'Receiving TD', 'Yds.1': 'Rushing Yards', 'TD.1': 'Rushing TD', "Fmb": "Fumbels", "FL": "Fumbles Lost", "Att": "Rush Attempts"}, inplace=True)
 
-def home_or_away_game(season: pd.DataFrame) -> None:
+def feature_extraction(season: pd.DataFrame) -> None:
     """
     This method will replace the unnamed 6 column with a 1 if the game was away and 0 if it was a home game
     :param season:
     :return:
     """
     df['Unnamed: 6'] = [1 if game == '@' else 0 for game in season['Unnamed: 6']]
-    df.rename(columns={'Unnamed: 6': 'Home or Away'}, inplace=True)
+    df.rename(columns={'Unnamed: 6': 'Home/Away'}, inplace=True)
 
-def did_start(season: pd.DataFrame) -> None:
     """
     This method will take in a df and encode the GS (game started) column for ML use
     :param season: a dataframe for a season
@@ -35,12 +34,13 @@ def did_start(season: pd.DataFrame) -> None:
     """
     df['GS'] = [1 if game == '*' else 0 for game in season['GS']]
 
+
 def drop_columns(season: pd.DataFrame) -> pd.DataFrame:
     """
     Dropping unwanted or unuseful columns like defensive stats
     """
     season = season[:-1] # remove the last row
-    season = season.drop(columns=['Unnamed: 0', 'Week', 'DefSnp', 'Def%', 'STSnp', 'ST%'], axis=1) # There are no defensive players that we are scoring
+    season = season.drop(columns=['Unnamed: 0', 'Week', 'DefSnp', 'Def%', 'STSnp', 'ST%', 'Yds.2', 'FF', 'FR', 'FRTD', 'Result'], axis=1) # There are no defensive players that we are scoring
     return season
 
 def encode_categories(season: pd.DataFrame) -> None:
@@ -53,7 +53,6 @@ def calculate_fantasy_points(season: pd.DataFrame) -> None:
     """According to PPR scoring rules create a field for the points scored in this game
     Passing: Yds.1
     """
-
 
 # list player directories in data dir
 data = Path('data/')
@@ -85,8 +84,7 @@ for player in player_dirs:
         df = pd.read_csv(file)
 
         # Make certain columns more machine learning friendly
-        home_or_away_game(df)
-        did_start(df)
+        feature_extraction(df)
         df = drop_columns(df)
         rename_columns(df, position)
         season = get_year(df)
